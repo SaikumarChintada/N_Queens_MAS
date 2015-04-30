@@ -2,7 +2,7 @@
 The N-queens problem using Multi agent system
 
 Credits (for code):
-> brandonphelps 
+> brandonphelps \n
 > https://github.com/brandonphelps/N_Queens_MAS
 > remarks : nicely written frame
 
