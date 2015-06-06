@@ -1,0 +1,15 @@
+parents 	: {1: <Agent(1, initial)>}
+successors	: [<Agent(4, initial)>, <Agent(3, initial)>]
+sending ok? msg
+messages	: [[1, 1, [0, 0]]]
+agent2 is running
+processing ok? msg
+check_agent_view	: {1: [0, 0]}
+not consistent	: {1: [0, 0]}	[1, 0]
+after chech_agent_view	: [1, 2]
+pos		: [1, 2]
+message	: []
+agent_view	: {1: [0, 0]}
+no_goods	: {}
+processing no_good msg
+check_agent_view	: {1: [0, 0]}

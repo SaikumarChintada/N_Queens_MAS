@@ -1,0 +1,57 @@
+parents 	: {1: <Agent(1, initial)>, 2: <Agent(2, initial)>, 3: <Agent(3, initial)>}
+successors	: []
+sending ok? msg
+messages	: [[3, 1, [2, 0]], [2, 1, [1, 0]], [1, 1, [0, 0]]]
+agent4 is running
+processing ok? msg
+check_agent_view	: {3: [2, 0]}
+not consistent	: {3: [2, 0]}	[3, 0]
+after chech_agent_view	: [3, 2]
+pos		: [3, 2]
+message	: [[2, 1, [1, 0]], [1, 1, [0, 0]]]
+agent_view	: {3: [2, 0]}
+no_goods	: {}
+processing ok? msg
+check_agent_view	: {2: [1, 0], 3: [2, 0]}
+not consistent	: {2: [1, 0], 3: [2, 0]}	[3, 2]
+after chech_agent_view	: [3, 3]
+pos		: [3, 3]
+message	: [[1, 1, [0, 0]]]
+agent_view	: {2: [1, 0], 3: [2, 0]}
+no_goods	: {}
+processing ok? msg
+check_agent_view	: {1: [0, 0], 2: [1, 0], 3: [2, 0]}
+not consistent	: {1: [0, 0], 2: [1, 0], 3: [2, 0]}	[3, 3]
+domain exhausted --> backtrack
+backtracking
+sending no_goods to agent 3
+check_agent_view	: {1: [0, 0], 2: [1, 0]}
+not consistent	: {1: [0, 0], 2: [1, 0]}	[3, 3]
+after chech_agent_view	: [3, 1]
+pos		: [3, 1]
+message	: [[3, 1, [2, 2]], [3, 1, [2, 3]], [2, 1, [1, 2]]]
+agent_view	: {1: [0, 0], 2: [1, 0]}
+no_goods	: {}
+processing ok? msg
+check_agent_view	: {1: [0, 0], 2: [1, 0], 3: [2, 2]}
+not consistent	: {1: [0, 0], 2: [1, 0], 3: [2, 2]}	[3, 1]
+domain exhausted --> backtrack
+backtracking
+sending no_goods to agent 3
+check_agent_view	: {1: [0, 0], 2: [1, 0]}
+pos		: [3, 1]
+message	: [[3, 1, [2, 3]], [2, 1, [1, 2]]]
+agent_view	: {1: [0, 0], 2: [1, 0]}
+no_goods	: {}
+processing ok? msg
+check_agent_view	: {1: [0, 0], 2: [1, 0], 3: [2, 3]}
+pos		: [3, 1]
+message	: [[2, 1, [1, 2]]]
+agent_view	: {1: [0, 0], 2: [1, 0], 3: [2, 3]}
+no_goods	: {}
+processing ok? msg
+check_agent_view	: {1: [0, 0], 2: [1, 2], 3: [2, 3]}
+pos		: [3, 1]
+message	: []
+agent_view	: {1: [0, 0], 2: [1, 2], 3: [2, 3]}
+no_goods	: {}
