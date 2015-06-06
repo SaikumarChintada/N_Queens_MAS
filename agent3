@@ -1,39 +1,97 @@
 parents 	: {1: <Agent(1, initial)>, 2: <Agent(2, initial)>}
 successors	: [<Agent(4, initial)>]
+-------------------------------------------
 sending ok? msg
 messages	: [[2, 1, [1, 0]], [1, 1, [0, 0]]]
 agent3 is running
-processing ok? msg
+processing ok? msg from agent2
 check_agent_view	: {2: [1, 0]}
 not consistent	: {2: [1, 0]}	[2, 0]
+sending ok? msg
 after chech_agent_view	: [2, 2]
+-----------------------------------
 pos		: [2, 2]
 message	: [[1, 1, [0, 0]]]
 agent_view	: {2: [1, 0]}
-no_goods	: {}
-processing ok? msg
+no_goods	: {-1: {0: [-1, -1]}}
+-----------------------------------
+processing ok? msg from agent1
 check_agent_view	: {1: [0, 0], 2: [1, 0]}
 not consistent	: {1: [0, 0], 2: [1, 0]}	[2, 2]
+sending ok? msg
 after chech_agent_view	: [2, 3]
+-----------------------------------
 pos		: [2, 3]
 message	: [[2, 1, [1, 2]]]
 agent_view	: {1: [0, 0], 2: [1, 0]}
-no_goods	: {}
-processing ok? msg
+no_goods	: {-1: {0: [-1, -1]}}
+-----------------------------------
+processing ok? msg from agent2
 check_agent_view	: {1: [0, 0], 2: [1, 2]}
 not consistent	: {1: [0, 0], 2: [1, 2]}	[2, 3]
 domain exhausted --> backtrack
-backtracking
-sending no_goods to agent 2
+therefore backtracking
+sending no_goods to agent 2	{1: [0, 0], 2: [1, 2]}
 check_agent_view	: {1: [0, 0]}
+after chech_agent_view	: [2, 3]
+after chech_agent_view	: [2, 3]
+-----------------------------------
 pos		: [2, 3]
-message	: [[4, 2, {1: [0, 0], 2: [1, 0], 3: [2, 0]}]]
+message	: [[4, 2, {1: [0, 0], 2: [1, 0], 3: [2, 0]}], [2, 1, [1, 3]]]
 agent_view	: {1: [0, 0]}
-no_goods	: {}
-processing no_good msg
-check_agent_view	: {1: [0, 0], 2: [1, 2]}
-not consistent	: {1: [0, 0], 2: [1, 2]}	[2, 3]
-domain exhausted --> backtrack
-backtracking
-sending no_goods to agent 2
+no_goods	: {-1: {0: [-1, -1]}}
+-----------------------------------
+processing no_good msg recieved from agent4	[4, 2, {1: [0, 0], 2: [1, 0], 3: [2, 0]}]
+-----------------------------------
+pos		: [2, 3]
+message	: [[2, 1, [1, 3]]]
+agent_view	: {1: [0, 0]}
+no_goods	: {1: {1: [0, 0], 2: [1, 0], 3: [2, 0]}, -1: {0: [-1, -1]}}
+-----------------------------------
+processing ok? msg from agent2
+check_agent_view	: {1: [0, 0], 2: [1, 3]}
+not consistent	: {1: [0, 0], 2: [1, 3]}	[2, 3]
+sending ok? msg
+after chech_agent_view	: [2, 1]
+-----------------------------------
+pos		: [2, 1]
+message	: [[4, 2, {1: [0, 0], 2: [1, 0], 3: [2, 2]}]]
+agent_view	: {1: [0, 0], 2: [1, 3]}
+no_goods	: {1: {1: [0, 0], 2: [1, 0], 3: [2, 0]}, -1: {0: [-1, -1]}}
+-----------------------------------
+processing no_good msg recieved from agent4	[4, 2, {1: [0, 0], 2: [1, 0], 3: [2, 2]}]
+2domain exhausted --> backtrack
+sending no_goods to agent 2	{1: [0, 0], 2: [1, 3]}
 check_agent_view	: {1: [0, 0]}
+after chech_agent_view	: [2, 1]
+-----------------------------------
+pos		: [2, 1]
+message	: []
+agent_view	: {1: [0, 0]}
+no_goods	: {1: {1: [0, 0], 2: [1, 0], 3: [2, 0]}, 2: {1: [0, 0], 2: [1, 0], 3: [2, 2]}, -1: {0: [-1, -1]}}
+-----------------------------------
+processing ok? msg from agent1
+check_agent_view	: {1: [0, 1]}
+not consistent	: {1: [0, 1]}	[2, 1]
+sending ok? msg
+after chech_agent_view	: [2, 0]
+-----------------------------------
+pos		: [2, 0]
+message	: []
+agent_view	: {1: [0, 1]}
+no_goods	: {1: {1: [0, 0], 2: [1, 0], 3: [2, 0]}, 2: {1: [0, 0], 2: [1, 0], 3: [2, 2]}, -1: {0: [-1, -1]}}
+-----------------------------------
+processing no_good msg recieved from agent4	[4, 2, {1: [0, 0], 2: [1, 3], 3: [2, 3]}]
+-----------------------------------
+pos		: [2, 0]
+message	: []
+agent_view	: {1: [0, 1]}
+no_goods	: {1: {1: [0, 0], 2: [1, 0], 3: [2, 0]}, 2: {1: [0, 0], 2: [1, 0], 3: [2, 2]}, 3: {1: [0, 0], 2: [1, 3], 3: [2, 3]}, -1: {0: [-1, -1]}}
+-----------------------------------
+processing no_good msg recieved from agent4	[4, 2, {1: [0, 0], 2: [1, 3], 3: [2, 1]}]
+-----------------------------------
+pos		: [2, 0]
+message	: []
+agent_view	: {1: [0, 1]}
+no_goods	: {1: {1: [0, 0], 2: [1, 0], 3: [2, 0]}, 2: {1: [0, 0], 2: [1, 0], 3: [2, 2]}, 3: {1: [0, 0], 2: [1, 3], 3: [2, 3]}, 4: {1: [0, 0], 2: [1, 3], 3: [2, 1]}, -1: {0: [-1, -1]}}
+-----------------------------------

@@ -1,5 +1,14 @@
 parents 	: {}
 successors	: [<Agent(4, initial)>, <Agent(3, initial)>, <Agent(2, initial)>]
+-------------------------------------------
 sending ok? msg
 messages	: []
 agent1 is running
+processing no_good msg recieved from agent2	[2, 2, {1: [0, 0]}]
+sending ok? msg
+-----------------------------------
+pos		: [0, 1]
+message	: []
+agent_view	: {}
+no_goods	: {1: {1: [0, 0]}, -1: {0: [-1, -1]}}
+-----------------------------------
