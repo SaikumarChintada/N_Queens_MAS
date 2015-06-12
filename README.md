@@ -6,7 +6,7 @@ Credits (for code):</br>
 > https://github.com/brandonphelps/N_Queens_MAS</br>
 > remarks : nicely written frame</br>
 
-Issues detected and rectified : (still working on)</br>
+Issues detected and rectified : (still working on -- > nqueensPartiallyWorking.py)</br>
 
 Descriptipon : </br>
 > Uses muti-threading in python.</br>
